@@ -1,0 +1,63 @@
+module.exports = {
+  base: '/fluent_help_translation/',
+  title: 'Hello Fluent_Help_Translation', 
+  description: 'Fluent帮助文档翻译工程 ',
+  themeConfig: {
+    editLinks: true,
+    docsDir: 'docs',
+    nav: [
+          {
+            text: '中文文档',
+            link: '/doc_zh/',
+          },
+           {
+            text: '英文文档',
+            link: '/doc_en/',
+          },
+        ],
+    sidebar: {
+          '/doc_en/': genSidebarConfig_en(''),
+          '/doc_zh/': genSidebarConfig_zh('文件目录')
+        }
+  }
+}
+
+function genSidebarConfig_en (title) {
+  return [
+    {
+      title,
+      collapsable: false,
+      children: [
+        '',
+        'Fluent_as_a_Server_Users_Guide',
+        'Fluent_Dynamics_Verification',
+        'Fluent_Getting_Started_Guide',
+        'Fluent_in_ANSYS_Workbench_Users_Guide',
+        'Fluent_Migration_Manual',
+        'Fluent_Text_Command_List',
+        'Fluent_Theory_Guide',
+        'Fluent_UDF_Manual'
+      ]
+    }
+  ]
+}
+
+function genSidebarConfig_zh (title) {
+  return [
+    {
+      title,
+      collapsable: false,
+      children: [
+        '',
+        'Fluent_as_a_Server_Users_Guide',
+        'Fluent_Dynamics_Verification',
+        'Fluent_Getting_Started_Guide',
+        'Fluent_in_ANSYS_Workbench_Users_Guide',
+        'Fluent_Migration_Manual',
+        'Fluent_Text_Command_List',
+        'Fluent_Theory_Guide',
+        'Fluent_UDF_Manual'
+      ]
+    }
+  ]
+}
